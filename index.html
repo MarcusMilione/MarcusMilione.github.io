@@ -6,12 +6,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115947626-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-115947626-1');
     </script>
 
@@ -76,21 +74,9 @@
         crossorigin="anonymous"></script>
     <script src="https://momentjs.com/downloads/moment.js">
     </script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.min.js"></script>
+    <script src="out.js"></script>
 </body>
 
 </html>
-
-<!-- 
-    1) create a calendar in which you pick a month to read the book
-        1.a) create input month
-        1.b) create submit button that saves that month's number of days
-    2) create area in which you input book link
-        2.a) create area for api to pull book information 
-
-        "nice idea... I would even go further... 
-        some books are easier to read then others... 
-        so you would download Project Gutenberg's database and analyse/compare different
-        books to parts of speech database, those books that are more similar to parts of 
-        speech database should be easier to read... so you can grade books by easiness to 
-        read"
