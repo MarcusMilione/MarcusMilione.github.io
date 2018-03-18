@@ -1,0 +1,73 @@
+body,
+html {
+    background-color: black;
+    text-align: center;
+}
+
+.bg {
+    opacity: 0.3;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    background-size: cover;
+    background-image: url("http://www.tokkoro.com/picsup/3015702-books_bookshelf_encyclopedia_historic_knowledge_library_old-book_shelf_study.jpg");
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-shadow: 1px 1px 1px black;
+    font-size: 24px;
+    font-family: sans-serif;
+    letter-spacing: .3px;
+    color: white;
+}
+
+.row {
+    justify-content: center;
+    font-size: .9rem;
+}
+
+.title-txt {
+    padding-top: 25px;
+    font-size: 1.7rem;
+}
+
+.descriptionForH1 {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.bookInput {
+    margin-top: .5em;
+}
+
+#titleURL {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+#startMonth {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+#endMonth {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+#submit {
+    color: white;
+    border: white;
+    background: #e66000;
+    margin-top: 2.1em;
+}
+
+.result {
+    color: white;
+    font-size: 30px;
+    /* background-color: red; */
+    margin-top: .5em;
+}

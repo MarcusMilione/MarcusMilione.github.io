@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book Per Month</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="title-txt">Break Down Books Into Daily Bite Size Pieces</h1>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="row">
+                <form id="mainForm" method="post">
+                    <div class="bookInput form-group">
+                        <div class="col">
+                            <label class="labels">Book You Want To Read</label>
+                            <input required class="form-control" name="titleURL" id="titleURL" type="text" placeholder="Book Title" />
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="startMonthInput form-group">
+                        <div class="col">
+                            <label class="labels">Start Date</label>
+                            <input required class="form-control" name="startMonth" id="startMonth" type="date" />
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="endMonthInput form-group">
+                        <div class="col">
+                            <label class="labels">Desired Finish Date</label>
+                            <input required class="form-control" name="endMonth" id="endMonth" type="date" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="submitButton">
+                            <input id="submit" type="submit" value="Search" name="submit" class="btn btn-outline-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="result" class="result"></div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment.js">
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+<!-- 
+    1) create a calendar in which you pick a month to read the book
+        1.a) create input month
+        1.b) create submit button that saves that month's number of days
+    2) create area in which you input book link
+        2.a) create area for api to pull book information 
+
+        "nice idea... I would even go further... 
+        some books are easier to read then others... 
+        so you would download Project Gutenberg's database and analyse/compare different
+        books to parts of speech database, those books that are more similar to parts of 
+        speech database should be easier to read... so you can grade books by easiness to 
+        read"
