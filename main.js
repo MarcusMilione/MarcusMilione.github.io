@@ -1,8 +1,8 @@
-const mainForm = document.getElementById("mainForm");
-const submitBtn = document.getElementById("submit");
+var mainForm = document.getElementById("mainForm");
+var submitBtn = document.getElementById("submit");
 
-let startDateElem = document.getElementById("startMonth");
-let endDateElem = document.getElementById("endMonth");
+var startDateElem = document.getElementById("startMonth");
+var endDateElem = document.getElementById("endMonth");
 
 startDateElem.addEventListener('blur', function () {
     if (startDateElem.value !== "") {
@@ -12,12 +12,12 @@ startDateElem.addEventListener('blur', function () {
 
 mainForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    const title = document.getElementById("titleURL").value;
-    let startDate = startDateElem.value;
-    let endDate = endDateElem.value;
-    let getStartDate = moment(startDate);
-    let getEndDate = moment(endDate);
-    let diffDays = getEndDate.diff(getStartDate, 'days');
+    var title = document.getElementById("titleURL").value;
+    var startDate = startDateElem.value;
+    var endDate = endDateElem.value;
+    var getStartDate = moment(startDate);
+    var getEndDate = moment(endDate);
+    var diffDays = getEndDate.diff(getStartDate, 'days');
     submitBtn.value = "Loading";
 
     fetch("https://goodreads-pages.now.sh/" + title)
@@ -33,11 +33,11 @@ mainForm.addEventListener("submit", (evt) => {
                     if (val === "Not Found") {
                         return;
                     };
-                    let pagesPerDay = Math.ceil(val / diffDays);
+                    var pagesPerDay = Math.ceil(val / diffDays);
                     if (diffDays == 0) {
                         pagesPerDay = val;
                     }
-                    const result = document.getElementById("result");
+                    var result = document.getElementById("result");
                     result.innerHTML = "Read " + pagesPerDay + " Pages Per Day.";
                     if (isNaN(pagesPerDay)) {
                         result.innerHTML = "Please Enter A Valid Book Title.";
@@ -45,7 +45,7 @@ mainForm.addEventListener("submit", (evt) => {
                 })
         })
         .catch((err) => {
-            const error = document.getElementById("titleError");
+            var error = document.getElementById("titleError");
             result.innerHTML = "Enter a valid book title.";
             submitBtn.value = "CALCULATE";
             console.log(err);
